@@ -23,4 +23,12 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UPROPERTY(EditAnywhere)
+	FVector MyVector;
+
+	UPROPERTY(EditAnywhere)
+	float MyFloat;
+
+	UPROPERTY(EditAnywhere)
+	float MyFloat2;
 };

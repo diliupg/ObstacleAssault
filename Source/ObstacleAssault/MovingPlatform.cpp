@@ -4,7 +4,10 @@
 #include "MovingPlatform.h"
 
 // Sets default values
-AMovingPlatform::AMovingPlatform()
+AMovingPlatform::AMovingPlatform():
+	MyVector(1.236f, 2.f, 3.f),
+	MyFloat(0),
+	MyFloat2(23.67f)
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -15,7 +18,9 @@ AMovingPlatform::AMovingPlatform()
 void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	SetActorLocation(MyVector);
+
 }
 
 // Called every frame
